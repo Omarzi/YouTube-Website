@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x:hidden;
+    background: black;
+    /* background: gray; */
+    direction: rtl;
+}
+
+hr {
+    height: .5px;
+    width: 75%;
+    background: #999;
+}
+
+h3 {
+    color: #999;
+    padding: 7px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+/* Start Navigation */
+.navigation {
+    position: fixed;
+    width: 350px;
+    height: 100%;
+    /* background: #003147; */
+    transition: .5s;
+    overflow: hidden;
+}
+
+.navigation.active {
+    width: 60px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navigation ul li:hover {
+    background: #03a9f4;
+    color: #fff;
+}
+
+.navigation ul li:nth-child(1) {
+    margin-bottom: 20px;
+}
+
+
+.navigation ul li:nth-child(1):hover {
+    background: transparent;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    width: 100%;
+    color: #fff;
+    /* display: block; */
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navigation ul li a .icon i {
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.navigation .imgBox {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.navigation .imgBox img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.navigation ul li a .icons i {
+    margin-right: -40px;
+    color: red;
+    margin-top: 14px;
+    font-size: 33px;
+}
+
+.navigation ul li a .titleh {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    margin-bottom: -px;
+    line-height: 60px;
+    white-space: nowrap;
+    font-size: 24px;
+}
+
+.navigation ul li a .titles {
+    margin-left: -20px;
+    margin-top: -10px;
+    margin-right: 50px;
+    color: #999;
+}
+/* End Navigation */
+
+
+/* Start Main */
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    right: 300px;
+    min-height: 100vh;
+    background: #f5f5f5;
+    transition: .5s;
+}
+
+.main.active {
+    width: calc(100% - 60px);
+    right: 60px;
+}
+
+.main .topbar {
+    width: 100%;
+    background: #fff;
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .topbar .toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    /* background: red; */
+    cursor: pointer;
+}
+
+.main .topbar .toggle::before {
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: #111;
+}
+
+.search {
+    position: relative;
+    width: 600px;
+    margin-right: 200px;
+    /* margin: 0 10px; */
+}
+
+.search label {
+    position: relative;
+    width: 100%;
+}
+
+.search label input {
+    width: 100%;
+    height: 40px;
+    /* border-radius: 10px; */
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 25px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .6);
+}
+
+.search label i {
+    position: absolute;
+    left: 20px;
+    font-size: 24px;
+    top: -4px;
+}
+
+/* .mic {
+    padding: auto;
+    margin-left: 100px;
+} */
+
+.user {
+    position: relative;
+    min-width: 50px;
+    height: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.user img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.others {
+    left: 50px;
+    margin-left: -190px;
+}
+
+.others i{
+    margin-right: 50px;
+    font-size: 27px;
+}
+
+/* Start CardBox */
+.cardBox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+
+.cardBox .card {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.cardBox .card .numbers {
+    position: relative;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.cardBox .card .cardName {
+    color: #999;
+}
+
+.cardBox .card .iconBox {
+    font-size: 2.5em;
+    color: #03a9f4;
+}
+/* End CardBox */
+
+
+
+
+/* Start details */
+.details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+    margin-top: 30px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.details .videos .imgb {
+    width: 370px;
+    height: 200px;
+}
+
+.details .videos .all {
+    display: flex;
+}
+
+.details .videos .all h4 {
+    margin-right: 60px;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.details .videos p {
+    margin-right: 60px;
+    /* margin-top: 2px; */
+}
+
+.details .imgs {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 20px;
+    /* margin-top: 10px; */
+    margin-top: -40px;
+}
+    
+.details .imgs img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* End details */
